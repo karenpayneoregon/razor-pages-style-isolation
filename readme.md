@@ -4,18 +4,19 @@ Learn how to prevent dependencies on global styles and helps to avoid styling co
 
 # Pages
 
-There are three pages, <kbd>Index</kbd>, <kbd>About</kbd> and <kbd>Articles\\Index</kbd>.
+There are three pages, <kbd>Index</kbd>, <kbd>About</kbd> and <kbd>Articles\\Index</kbd> were each page will have the same content but by using CSS Isolation each page styles will be independent of the other pages.
 
 # site.css
 
-This is where we define `global` styles for a Razor pages web application.
+This is where we define `global` styles for a Razor pages web application. There is one style for `H6` which is overridden in each of the pages mentioned above.
 
 # Razor runtime compilation
-Css isolation may not working with Razor runtime compilation
+
+:warning: Css isolation may not working with Razor runtime compilation
 
 # Steps to setup CSS Isolation on a Razor Page
 
-We will begin with the main page <kbd>Index</kbd>.
+We will begin with the main page <kbd>Index</kbd> at the root of the project.
 
 1. Right click on `Pages` folder
 1. Add a new item, select text file
@@ -29,7 +30,7 @@ We will begin with the main page <kbd>Index</kbd>.
 
 Next repeat the above steps for other pages, in the project presented <kbd>About</kbd> and <kbd>Articles\\Index</kbd> have the exact sample styles as <kbd>Index</kbd> but have enough changes to styles so that when running the app the person running the app can see that the styles are isolated to their respective page.
 
-# Look under the covers
+# Under the covers
 
 While running the project, open the browser web tools, travese to, in this case IsolationWebApp.styles.css and note there are sections for each page and note the [b...] identifiers which are injected into the respective page.
 
@@ -59,6 +60,13 @@ Use
 ```
 
 This is because in the first example if the namespace changes the style sheet will not be located while in the second example it will be as when renaming the namespace in Visual Studio it will be in `nameof(IsolationWebApp)` when using `nameof`.
+
+# See also
+
+- ASP.NET Core [Blazor](https://learn.microsoft.com/en-us/aspnet/core/blazor/components/css-isolation?view=aspnetcore-6.0) CSS isolation
+- CSS isolation for[ MVC Views and Razor Pages](https://asp.net-hacker.rocks/2021/05/10/aspnetcore6-08-css-isolation.html)
+- [File nesting](https://learn.microsoft.com/en-us/visualstudio/ide/file-nesting-solution-explorer?view=vs-2022) in Solution Explorer
+
 
 # Summary
 
