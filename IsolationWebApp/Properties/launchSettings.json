@@ -3,7 +3,7 @@
     "IsolationWebApp": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "sp",
+      "launchUrl": "lang=sp?id=44",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
