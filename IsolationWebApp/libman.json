@@ -3,8 +3,8 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-      "library": "bootstrap-icons@1.9.1",
-      "destination": "wwwroot/lib/bootstrap-icons/"
+      "library": "bootbox.js@5.5.3",
+      "destination": "wwwroot/lib/bootbox.js/"
     }
   ]
 }

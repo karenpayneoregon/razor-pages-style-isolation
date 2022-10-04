@@ -4,7 +4,17 @@
     ViewData["Title"] = "Home page";
 }
 
+@functions {
+    public string GetHello()
+    {
+        return "Hello";
+    }
+}
+
 <link rel="stylesheet" href="~/@(nameof(IsolationWebApp)).styles.css" />
+
+
+
 
 <div>
     <h6>Index</h6>
@@ -21,4 +31,29 @@
         <p><kbd>@Model.Language</kbd></p>
     }
 
+    <div id="B1" class="btn btn-primary">Click me</div>
+
 </div>
+
+
+
+@section Scripts
+{
+    <script>
+
+        $('#B1').click(function (event) {
+
+            var timeout = 2000;
+            var dialog = bootbox.dialog({
+                message: '<p class="text-center mb-0">Pretty cool having CSS Isolation</p>',
+                centerVertical: true,
+                closeButton: false
+            });
+
+            setTimeout(function () { dialog.modal('hide'); }, timeout);
+            dialog.modal('hide');
+
+        });
+   
+    </script>
+} 
