@@ -14,6 +14,18 @@ This is where we define `global` styles for a Razor pages web application. There
 
 :warning: Css isolation may not working with Razor runtime compilation
 
+# Chang environments
+
+Several times isolation failed when changing from development to staging environment and worked once back in development. When not working in staging the isolation style sheet file mirrored the page, no CSS.
+
+What appears to be the fix is adding the following to Program.cs
+
+```csharp
+builder.WebHost.UseStaticWebAssets();
+```
+
+Currently have an issue/ticket with Microsoft, will update if they have a recommendation.
+
 # Steps to setup CSS Isolation on a Razor Page
 
 We will begin with the main page <kbd>Index</kbd> at the root of the project.
