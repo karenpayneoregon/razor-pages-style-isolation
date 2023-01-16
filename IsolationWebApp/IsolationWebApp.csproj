@@ -16,6 +16,7 @@
 
 
 	<ItemGroup>
+		<!-- ReSharper disable once VulnerablePackage -->
 		<PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.9" />
 		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
 	</ItemGroup>
