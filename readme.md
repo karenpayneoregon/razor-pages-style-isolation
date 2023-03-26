@@ -14,7 +14,7 @@ This is where we define `global` styles for a Razor pages web application. There
 
 :warning: Css isolation may not working with Razor runtime compilation
 
-# Chang environments
+# Change environments
 
 Several times isolation failed when changing from development to staging environment and worked once back in development. When not working in staging the isolation style sheet file mirrored the page, no CSS.
 
